@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mijn Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at top left, #0f172a 0, #020617 40%, #000 100%);
+      color: #e5e7eb;
+      padding: 24px;
+      box-sizing: border-box;
+    }
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .hero {
+      padding: 20px;
+      border-radius: 20px;
+      border: 1px solid rgba(148,163,184,.5);
+      background:
+        radial-gradient(circle at top right, rgba(249,115,22,.35), transparent 55%),
+        linear-gradient(135deg, #020617, #02081a);
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      margin: 0 0 6px;
+      font-size: 26px;
+    }
+    .hero p {
+      margin: 0;
+      font-size: 14px;
+      color: #9ca3af;
+    }
+    .grid {
+      display: grid;
+      gap: 14px;
+    }
+    @media (min-width: 800px) {
+      .grid {
+        grid-template-columns: 2fr 1.4fr;
+      }
+      .card-large {
+        grid-column: span 2;
+      }
+    }
+    .card {
+      border-radius: 16px;
+      border: 1px solid rgba(148,163,184,.35);
+      background: radial-gradient(circle at top left, rgba(15,23,42,.65), #020617);
+      padding: 14px 16px;
+    }
+    .card h2, .card h3 {
+      margin: 0 0 4px;
+      font-size: 18px;
+    }
+    .subtitle {
+      margin: 0 0 10px;
+      font-size: 13px;
+      color: #9ca3af;
+    }
+    .tasks {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .tasks li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(51,65,85,.9);
+      background: rgba(15,23,42,.95);
+      font-size: 13px;
+    }
+    .tasks input {
+      width: 16px;
+      height: 16px;
+      accent-color: #f97316;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section class="hero">
+      <h1>Today, Tomorrow, Forever</h1>
+      <p>Simpele dashboard om te zien wat je echt hebt gedaan qua gym, school en werk.</p>
+    </section>
+
+    <section class="grid">
+      <section class="card card-large">
+        <h2>Vandaag</h2>
+        <p class="subtitle">Jouw big 3 voor vandaag:</p>
+        <ul class="tasks">
+          <li><input type="checkbox" /> Gym / training</li>
+          <li><input type="checkbox" /> Studie / leren</li>
+          <li><input type="checkbox" /> Werk / e-commerce</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h3>Notities</h3>
+        <p class="subtitle">Gebruik dit dashboard gewoon als visuele reminder.</p>
+        <p style="font-size:13px;color:#9ca3af;">
+          Later kunnen we dit uitbreiden met echte opslag (localStorage), grafieken en week-tellingen.
+        </p>
+      </section>
+
+      <section class="card">
+        <h3>Week doelen</h3>
+        <p class="subtitle">Bijvoorbeeld:</p>
+        <ul style="font-size:13px; padding-left:18px; margin:0;">
+          <li>Gym: 4–5x</li>
+          <li>Studie: 5 dagen focus</li>
+          <li>Werk/e-com: elke dag 1 actie</li>
+        </ul>
+      </section>
+    </section>
+  </div>
+</body>
+</html>
